@@ -1,0 +1,24 @@
+.Header nav {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.Header nav a {
+  color: black;
+  cursor: pointer;
+  display: block;
+  margin: 10px;
+  text-decoration: underline;
+}
+
+.SignupForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.SignupForm input,
+.SignupForm button {
+  max-width: 400px;
+  width: 100%;
+}
