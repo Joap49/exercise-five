@@ -1,9 +1,17 @@
-.Header nav {
-  display: flex;
-  margin: 20px;
-  justify-content: space-between;
+.App {
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
+.Header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Title h1 {
+  display: flex;
+  justify-content: center;
+}
 .Header nav a {
   color: black;
   cursor: pointer;
@@ -15,6 +23,7 @@
 .SignupForm {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .SignupForm input,

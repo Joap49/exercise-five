@@ -2,7 +2,7 @@ import React from "react";
 
 function UserProfileComponent({ userInformation }) {
   return (
-    <div>
+    <div className="SignupForm">
       <p>
         <strong>UID:</strong> {userInformation.uid}
       </p>
