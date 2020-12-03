@@ -109,19 +109,26 @@ function App() {
       <Header loggedIn={loggedIn} LogoutFunction={LogoutFunction} />
       <Router>
         <Route exact path="/login">
-          {/* if someone is logged in, dont take them to login page- take to user profiile  */}
-          {!loggedIn ? <Redirect to="/login" /> : <Redirect to="/" />}
+          {/* If someone is logged in, do not take them to login page 
+        - take them to user profile*/}
+          {!loggedIn ? (
+            <Login LoginFunction={LoginFunction} />
+          ) : (
+            <Redirect to="/" />
+          )}
         </Route>
         <Route exact path="/create-account">
-          {/* If someone is logged in, do not take them to create account page - take to user profiile */}
+          {/* If someone is logged in, do not take them to create account page 
+        - take them to user profile*/}
           {!loggedIn ? (
-            <Redirect to="/create-account" />
+            <CreateAccount CreateAccountFunction={CreateAccountFunction} />
           ) : (
-            <UserProfile userInformation={userInformation} />
+            <Redirect to="/" />
           )}
         </Route>
         <Route exact path="/">
-          {/* if someone is not logged in, dont take them to use profile page */}
+          {/* If someone is not logged in, do not take them to user profile page 
+        - take them to login*/}
           {!loggedIn ? (
             <Redirect to="/login" />
           ) : (
