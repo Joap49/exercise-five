@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
 import firebase from "firebase/app"; //import everything from this package as firebase
 import "firebase/auth"; //importing entire package
